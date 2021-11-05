@@ -11,11 +11,10 @@ public class PerKind implements GefangenenStrategie{
 
     @Override
     public boolean getNextDecision() {
+        counter++;
         if (this.counter % 3 == 0){
-            counter++;
             return false;
         }else {
-            counter++;
             return true;
         }
     }

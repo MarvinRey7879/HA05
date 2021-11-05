@@ -13,7 +13,7 @@ public class GefangenenDilemma {
         this.spieler2 = strategie2;
     }
     public void spiele(int n){
-        for (int i = 0; i<=n;i++){
+        for (int i = 1; i<=n;i++){
             // geht auch ohne die Variabeln aber zur veranschaulichung benutze ich die
             boolean spieler1Kooperiert = spieler1.getNextDecision();
             boolean spieler2Kooperiert = spieler2.getNextDecision();
@@ -29,11 +29,11 @@ public class GefangenenDilemma {
             }
 
             else if (!spieler2Kooperiert && spieler1Kooperiert){
-                strafpunkteSpieler2++;
+                strafpunkteSpieler2 +=1;
                 strafpunkteSpieler1 += 6;
             }
             else{
-                strafpunkteSpieler1++;
+                strafpunkteSpieler1 += 1;
                 strafpunkteSpieler2 += 6;
             }
             spieler1.setOpponentsLastDecision(spieler2Kooperiert);

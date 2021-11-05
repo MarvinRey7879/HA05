@@ -3,8 +3,7 @@ package HA05;
 public class TitForTat implements GefangenenStrategie{
 
     //Kooperieren = true || Verrat = false
-    private boolean firstRound = true;
-    private boolean lastDecisionOpponent;
+    private boolean lastDecisionOpponent =  true;
 
     @Override
     public void setOpponentsLastDecision(boolean decision) {
@@ -13,11 +12,6 @@ public class TitForTat implements GefangenenStrategie{
 
     @Override
     public boolean getNextDecision() {
-        if (this.firstRound){
-            this.firstRound = false;
-            return true;
-        }else {
-            return this.lastDecisionOpponent;
-        }
+        return this.lastDecisionOpponent;
     }
 }
